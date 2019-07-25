@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //无重复字符的最长子串
+        let str = 'assdfasfrfdfsefrtythjiklhg'
+        lengthOfLongestSubstring = (s)=>{
+            let maxLen = 0;
+        let start = 0, end = 0;
+        for (; end < s.length; end++) {
+            let indexOf = s.substring(start, end).indexOf(s.charAt(end));
+            if (indexOf != -1) {
+                maxLen = Math.max(maxLen, end - start);
+                start += indexOf + 1;
+            }
+        }
+        return Math.max(maxLen, end - start);
+        }
+        
+
+        console.log(lengthOfLongestSubstring(str))
+        </script>
+</body>
+</html>

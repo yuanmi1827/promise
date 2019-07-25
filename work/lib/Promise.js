@@ -4,7 +4,7 @@ Promise构造函数模块
 (function (window) {
   
   /* 
-  Promise构造函数
+     Promise构造函数
   */
   function Promise(excutor) {
     const self = this // 将promise对象保存到self
@@ -133,7 +133,7 @@ Promise构造函数模块
   */
   Promise.prototype.then = function (onResolved, onRejected) {
     const self = this
-
+    
     // 指定 onResolved 与 onRejected的默认值
     onResolved = typeof onResolved === 'function' ? onResolved : value => value  // 让返回promise成功, 值是value
     onRejected = typeof onRejected === 'function' ? onRejected : reason => {throw reason} // 让返回promise失败, 值为reason

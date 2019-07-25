@@ -16,6 +16,10 @@
          * @param {*} value
          */
 		function resolve(value) {
+            // 如果状态不是pending, 直接结束
+             if (self.status!='pending') {
+                return
+             }
 			self.status = 'resolved' //更改status状态
 			self.data = value
 
@@ -151,9 +155,11 @@
     
     }
     
-    Promise.race=function(){
+    Promise.race=function(promises){
         return new Promise((resolve,reject)=>{
-            
+            promises.forEach((promise)=>{
+                promise.then(value=>resolve(value),reason => reject(reason))
+            })
         })
     }
 	

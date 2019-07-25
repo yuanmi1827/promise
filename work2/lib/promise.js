@@ -140,12 +140,19 @@
 	}
 
     /**
-     * atch方法 
+     * catch方法 
      */
     Promise.prototype.catch = function(onReject){
         return this.then(null,onReject)
     }
 
+    Promise.prototype.all=function(){
+    
+    
+    }
+	
+	
+	
     Promise.resolve=function(value){
         return new Promise((resolve,reject)=>{
             if(value instanceof Promise){

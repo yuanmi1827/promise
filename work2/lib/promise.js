@@ -152,7 +152,9 @@
 	
 	let resolveCount = 0
 	
-	promises.forEach((promise,index)=>{
+	return new Promise((resolve,reject)=>{
+	
+		promises.forEach((promise,index)=>{
 	   promise.then(value=>{
 	     resolveCount ++ 
              values[index]=value
@@ -162,6 +164,7 @@
 	   },reason=>{
 	   	reject(reason)
 	   })
+	})
 	})
     
     }

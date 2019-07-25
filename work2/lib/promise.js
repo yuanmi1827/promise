@@ -152,7 +152,8 @@
     }
     
     Promise.race=function(){}
-	
+    Promise.prototype.xxx=function(){}
+
 	
     Promise.resolve=function(value){
         return new Promise((resolve,reject)=>{

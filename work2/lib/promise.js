@@ -150,7 +150,8 @@
     
     
     }
-	
+    
+    Promise.race=function(){}
 	
 	
     Promise.resolve=function(value){

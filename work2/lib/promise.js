@@ -150,8 +150,26 @@
         return this.then(null,onReject)
     }
 
-    Promise.all=function(){
-    
+    Promise.all=function(promises){
+    	const length = promises.length
+	const values = new Array(length)
+	
+	let resolveCount = 0
+	
+	return new Promise((resolve,reject)=>{
+	
+		promises.forEach((promise,index)=>{
+	   promise.then(value=>{
+	     resolveCount ++ 
+             values[index]=value
+             if(values.length === length){
+		resolve(values)
+		}
+	   },reason=>{
+	   	reject(reason)
+	   })
+	})
+	})
     
     }
     

@@ -199,6 +199,8 @@
 
         })
     }
+	
+	let a = 10
 	//暴露promise
 	window.Promise = Promise
 })(window)

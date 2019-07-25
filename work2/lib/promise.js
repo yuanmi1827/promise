@@ -200,7 +200,7 @@
         })
     }
 
-     let b=30
+    
 
 	//暴露promise
 	window.Promise = Promise

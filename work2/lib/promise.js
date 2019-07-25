@@ -146,7 +146,7 @@
         return this.then(null,onReject)
     }
 
-    Promise.prototype.all=function(){
+    Promise.all=function(){
     
     
     }
@@ -166,12 +166,7 @@
 
     Promise.reject=function(reason){
         return new Promise((resolve,reject)=>{
-            if(reason instanceof Promise){
-                reason.then(resolve,reject)
-
-            }else{
-                reject(reason)
-            }
+           reject(reason)
 
         })
     }

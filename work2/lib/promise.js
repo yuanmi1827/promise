@@ -156,6 +156,12 @@
         })
     }
 
+   Promise.reject=function(reason){
+   	return new Promise((resolve,reject)=>{
+	
+	
+	})
+   }
 	//暴露promise
 	window.Promise = Promise
 })(window)

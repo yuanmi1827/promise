@@ -151,7 +151,11 @@
     
     }
     
-    Promise.race=function(){}
+    Promise.race=function(){
+        return new Promise((resolve,reject)=>{
+            
+        })
+    }
 	
 	
     Promise.resolve=function(value){
